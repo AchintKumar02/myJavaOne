@@ -35,14 +35,15 @@ class BankAccount{
     void showMenu(){
         char option = '\0';
         Scanner s = new Scanner(System.in);
+        System.out.println("\n");
         System.out.println("Welcome " + customerName);
         System.out.println("your ID is " + customerId);
         System.out.println("\n");
-        System.out.println("A  check your account  balance");
-        System.out.println("B  deposit ");
-        System.out.println("C  withdraw ");
-        System.out.println("D  previous transactions");
-        System.out.println("E  Exit");
+        System.out.println("A  check your account  balance.");
+        System.out.println("B  deposit. ");
+        System.out.println("C  withdraw. ");
+        System.out.println("D  previous transactions.");
+        System.out.println("E  Exit.");
 
         do{
             System.out.println("==================================================================");
@@ -55,13 +56,14 @@ class BankAccount{
                     System.out.println("============================================================");
                     System.out.println("\n");
                     System.out.println("Your account banlance is " + balance);
-                    System.out.println("\n");
+                    //System.out.println("\n");
                     System.out.println("=============================================================");
                     break;
 
                 case 'B':
                     System.out.println("=============================================================");
                     System.out.println("***************DEPOSIT************");
+                    System.out.println("Enter the amount to be diposited");
                     int amount = s.nextInt();
                     deposit(amount);
                     System.out.println("\n");
@@ -70,6 +72,7 @@ class BankAccount{
                 case 'C':
                     System.out.println("=============================================================");
                     System.out.println("***************WITHDRAW************");
+                    System.out.println("Enter the amount to be withdrawn");
                     int amount2 = s.nextInt();
                     withdraw(amount2);
                     System.out.println("\n");
@@ -92,12 +95,12 @@ class BankAccount{
                      break;
             }
         }while(option != 'E');
-          System.out.println("Thankyou for using our sservice ");
+          System.out.println("Thankyou for using our service ");
     }
 }
 public class BankApplication{
     public static void main(String args[]){
-        BankAccount menu = new BankAccount("Achint", "8721");
+        BankAccount menu = new BankAccount("Achint kumar.", "0008721.");
         menu.showMenu();
 
     }
