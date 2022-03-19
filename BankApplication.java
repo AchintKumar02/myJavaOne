@@ -1,13 +1,6 @@
 import java.util.Scanner;
-public class BankApplication{
-    public static void main(String args[]){
-        BankAccount menu = new BankAccount("Achint", "8721");
-        menu.showMenu();
 
-    }
-
-}
-public class BankAccount{
+class BankAccount{
     int balance;
     int previousTransaction;
     String customerName;
@@ -101,4 +94,12 @@ public class BankAccount{
         }while(option != 'E');
           System.out.println("Thankyou for using our sservice ");
     }
+}
+public class BankApplication{
+    public static void main(String args[]){
+        BankAccount menu = new BankAccount("Achint", "8721");
+        menu.showMenu();
+
+    }
+
 }
