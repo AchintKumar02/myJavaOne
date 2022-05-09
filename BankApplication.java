@@ -11,7 +11,7 @@ class BankAccount{
         customerId = Id;
     }
 
-    void deposit( int amount){
+    void deposit(int amount){
         if(amount != 0){
             balance = balance + amount;
             previousTransaction = amount;
@@ -63,7 +63,7 @@ class BankAccount{
                 case 'B':
                     System.out.println("=============================================================");
                     System.out.println("***************DEPOSIT************");
-                    System.out.println("Enter the amount to be diposited");
+                    System.out.println("Enter the amount to be deposited");
                     int amount = s.nextInt();
                     deposit(amount);
                     System.out.println("\n");
